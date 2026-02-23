@@ -3,7 +3,7 @@ import java.util.Vector;
 public class Banksystem {
     static Vector<String> names = new Vector<>();
     static Vector<Integer> accountnums = new Vector<>();
-    static Vector<String> passwords = new Vector<>();
+    static Vector<Integer> passwords = new Vector<>();
     static Vector<Double> balances = new Vector<>();
     static int nextAccountNumber = 1001;
     public static void main (String args[])
@@ -48,7 +48,7 @@ public class Banksystem {
          String name = in.nextLine();
 in.nextLine();
          System.out.print("Enter Password: ");
-         String password = in.nextLine();
+         Integer password = in.nextInt();
 in.nextLine();
          System.out.print("Enter Initial Balance: ");
          double balance = in.nextDouble();
@@ -68,7 +68,7 @@ in.nextLine();
     in.nextLine();
 
     System.out.print("Enter Password: ");
-    String password = in.nextLine();
+    Integer password = in.nextInt();
 
     for (int i = 0; i < accountnums.size(); i++) {
         if (accountnums.get(i) == accNum && passwords.get(i).equals(password)) {
